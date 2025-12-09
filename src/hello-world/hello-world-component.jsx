@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import { HelloWorldStyle } from "./hello-world-style.js";
 const HelloWorldComponent = () => {
   return (
@@ -46,6 +47,7 @@ const HelloWorldComponent = () => {
         <td>abc,xyz</td>
       </tr>
     </table></div>
+    <Outlet />
     </HelloWorldStyle>
   );
 };
