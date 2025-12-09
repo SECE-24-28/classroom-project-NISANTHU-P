@@ -8,12 +8,13 @@ import ContactComponent from "./portfolio/contact-component.jsx";
 import { Routes, Route } from "react-router-dom";
 import UseStateComponent from "./usestate/use-state-component.jsx";
 import UseStateFormComponent from "./use-state-forms/use-state-form-component.jsx";
+import RegistrationPageComponent from "./registration-page/registration-page-component.jsx";
 
 function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<UseStateFormComponent/>}/>
+      <Route path="/" element={<RegistrationPageComponent/>}/>
     </Routes>
   );
 };
