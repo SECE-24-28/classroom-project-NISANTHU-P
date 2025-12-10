@@ -9,7 +9,7 @@ import { faNetworkWired } from "@fortawesome/free-solid-svg-icons";
 import { faShieldHalved } from "@fortawesome/free-solid-svg-icons";
 
 
-const OurPromiseComponent=(props)=>{
+const OurPromiseComponent=()=>{
     return (
         <OurPromiseStyle>
                 <div className="ourpromise">
@@ -22,12 +22,12 @@ const OurPromiseComponent=(props)=>{
                         </p>
                     </div>
                     <div className="element">
-                        <div className="element_item" style={{"borderColor": props.colour}}>
+                        <div className="element_item" style={{"borderColor": "cyan"}}>
                             <div className="item">
-                                <FontAwesomeIcon icon={faLaptopCode} style={{ color: props.color, fontSize: "30px" }}/>
-                                <div className="item_title">{props.title}</div>
+                                <FontAwesomeIcon icon={faLaptopCode} style={{ color:"cyan", fontSize: "30px" }}/>
+                                <div className="item_title">Top Code Quality</div>
                             </div>
-                            <div className="element_content">{props.content}</div>
+                            <div className="element_content">Our commitment goes beyond mere code - it encompasses providing solutions. You receive W3C fully compliant markup, without any compromise on quality.</div>
                         </div>
                         <div className="element_item" style={{"borderColor": "rgb(239, 175, 75)"}}>
                             <div className="item">

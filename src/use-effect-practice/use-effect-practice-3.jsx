@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import LoadingSpinner from "../loading-spinner/loading-spinner-component";
+
 const UseEffectPracticeThree = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const fun1 = async () => {
       setLoading(true);
@@ -19,19 +20,18 @@ const UseEffectPracticeThree = () => {
       setLoading(false);
     };
     fun1();
-    console.log("the data:", data);
   }, []);
-  //   if (loading) {
-  //     return <LoadingSpinner />;
-  //   }
+
   return (
     <div>
       <h1>useEffect practice</h1>
       {loading ? (
-        <LoadingSpinner />
+        <div style={{textAlign: 'center', padding: '20px'}}>
+          <h2>Loading...</h2>
+        </div>
       ) : (
         data.map((item) => (
-          <div key={item.id} style={{ marginBottom: "20px" }}>
+          <div key={item.id} style={{ marginBottom: "20px", padding: "10px", border: "1px solid #ccc" }}>
             <h3>{item.title}</h3>
             <p>{item.body}</p>
           </div>
@@ -40,4 +40,5 @@ const UseEffectPracticeThree = () => {
     </div>
   );
 };
+
 export default UseEffectPracticeThree;
